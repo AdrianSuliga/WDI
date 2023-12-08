@@ -12,7 +12,7 @@ def jumper(T, row, col, cnt, jumps):
                 if jumper(T, row + jump[0], col + jump[1], cnt + 1, jumps):
                     return True
         T[row][col] = 0
-        return
+        return False
 
 def printT(T):
     n = len(T)
