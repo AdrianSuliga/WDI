@@ -9,12 +9,13 @@ def placeQueens(T, n, moves):
             printT(T)
             return True
         for move in moves:
-            if -1 < row + move[0] < n and -1 < col + move[1] < n and canPlace(row + move[0], col + move[1], T):
-                if rec(T, n, row + move[0], col + move[1], cnt + 1, moves):
-                    return True
-        return False
+            while -1 < row + move[0] < n and -1 < col + move[1] < n and canPlace(row + move[0], col + move[1], T):
+                rec(T, n, row + move[0], col + move[1], cnt, moves)
     for i in range(n):
-        if rec(T, n, 0, i, 1, moves): break
+        rec(T, n, 0, i, 1, moves)
+        printT(T)
+        T[0][i] = 0
+        print()
 
 def canPlace(row, col, T):
     n = len(T)
