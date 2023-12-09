@@ -67,10 +67,10 @@ def printT(T, n):
 def ex15(n):
     T = [[0 for _ in range(n)] for _ in range(n)]
     Q = [None for _ in range(n)]
-    #insertQueens(T, n, 0)
+    insertQueens(T, n, 0)
     #print(countQueens(T, n, 0))
-    print(countQueensV2(Q, 0, 0, n))
-    #printT(T, n)
+    #print(countQueensV2(Q, 0, 0, n))
+    printT(T, n)
 
 n = int(input())
 ex15(n)
