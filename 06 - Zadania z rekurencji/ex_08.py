@@ -1,3 +1,4 @@
+#Poprzednie zadanie, ale odważniki można umieszczać na obu szalkach
 from random import randrange
 def checkMass(T, index, sum, target):
     if sum == target: return True

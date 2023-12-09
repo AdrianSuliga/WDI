@@ -1,3 +1,8 @@
+"""
+Proszę napisać funkcję, która jako argument przyjmuje liczbę całkowitą i wypisuje wszystkie
+co najmniej dwucyfrowe liczby pierwsze, powstałe poprzez wykreślenie z liczby pierwotnej co najmniej jednej
+cyfry
+"""
 def crossNums(n, T):
     d = length(n)
     if d >= 2 and isPrime(n): 

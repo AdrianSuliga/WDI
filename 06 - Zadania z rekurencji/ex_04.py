@@ -1,4 +1,7 @@
-
+"""
+Problem skoczka szachowego. Proszę napisać funkcję, która wypełnia pola szachownicy o
+wymiarach NxN ruchem skoczka szachowego
+"""
 #brute force
 def jumper(T, row, col, cnt, jumps):
     T[row][col] = cnt

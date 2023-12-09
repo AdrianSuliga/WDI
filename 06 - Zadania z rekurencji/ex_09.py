@@ -1,3 +1,4 @@
+#Poprzednie zadanie. Program powinien wypisywać wybrane odważniki
 from random import randrange
 def printMass(T, index, sum1, sum2, target):
     if abs(sum1 - sum2) == target: return True

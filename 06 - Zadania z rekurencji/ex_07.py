@@ -1,3 +1,5 @@
+#Dany jest zestaw odważników T[N]. Napisać funkcję, która sprawdza czy jest możliwe odważenie określonej masy. 
+#Odważniki można umieszczać tylko na jednej szalce.
 from random import randrange
 def checkMass(T, index, sum, target):
     if sum == target: return True
