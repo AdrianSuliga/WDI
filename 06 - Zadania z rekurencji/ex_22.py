@@ -8,8 +8,7 @@ def ex22(n):
     T = [randrange(1,100) for _ in range(n)]
     def rec(T, ind, moves):
         n = len(T)
-        if ind == n - 1: 
-            return moves
+        if ind == n - 1: return moves
         if ind >= n: return -1
         cnt = -1
         for i in range(n):
