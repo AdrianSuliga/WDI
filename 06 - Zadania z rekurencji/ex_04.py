@@ -20,10 +20,7 @@ def jumper(T, row, col, cnt, jumps):
 def printT(T):
     n = len(T)
     for i in range(n):
-        for j in range(n):
-            print(T[i][j],end="      ")
-        print()
-    print()
+        print(T[i])
 
 def ex4(n):
     T = [[0 for _ in range(n)] for _ in range(n)]
