@@ -16,4 +16,4 @@ n = int(input("n="))
 k = int(input("k="))
 T = [randrange(1, 100) for _ in range(n)]
 print(ex32(T, k))
-print(T)
+#print(T)
