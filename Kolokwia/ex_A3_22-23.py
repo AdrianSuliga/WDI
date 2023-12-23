@@ -9,16 +9,16 @@ Jeżeli dotarcie do celu nie jest możliwe funkcja powinna zwrócić wartość N
 """
 from random import randrange
 def kingsPath(n, L, row, col, cnt, banned):
-    if row == n - 1 and col == n - 1: return cnt
-    if row >= n or row < 0 or col >= n: return None
+    if row == n - 1 and col == n - 1: return cnt # jeżeli dotarliśmy do prawego-dolnego rogu to zwracamy cnt
+    if row >= n or row < 0 or col >= n: return None # jeżeli wyszliśmy poza tablicę to zwracamy None
     for pawn in L:
-        if row == pawn[0] and col == pawn[1]: return None
-    k1, k2, k3 = None, None, None
-    if -1 < row + 1 < n and row + 1 != banned[0]:
+        if row == pawn[0] and col == pawn[1]: return None # jeżeli stanęliśmy na pionku to zwracamy None
+    k1, k2, k3 = None, None, None # zmienne do zapisania rezultatów 3 możliwych ruchów
+    if row + 1 != banned[0]: # jeżeli nie cofniemy się na poprzednie pole to wywołujemy rekurencję
         k1 = kingsPath(n, L, row + 1, col, cnt + 1, (row,col))
-    if -1 < row - 1 < n and row - 1 != banned[0]:
+    if row - 1 != banned[0]:
         k2 = kingsPath(n, L, row - 1, col, cnt + 1, (row,col))
-    if -1 < col + 1 < n and col + 1 != banned[1]:
+    if col + 1 != banned[1]:
         k3 = kingsPath(n, L, row, col + 1, cnt + 1, (row,col))
     maxi = 0
     if k1 != None: maxi = max(maxi, k1)
