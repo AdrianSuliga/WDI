@@ -9,18 +9,18 @@ skąd i dokąd należy przenieść wieżę
 """
 def move(T):
     n = len(T)
-    for i in range(n):
+    for i in range(n): # próbujemy przestawiać każdą znalezioną wieżę
         for j in range(n):
             if T[i][j]:
                 for k in range(n):
                     for m in range(n):
-                        if T[k][m]: continue
-                        T[i][j] = 0
+                        if T[k][m]: continue # nie ma sensu zamieniać miejscami 2 wież
+                        T[i][j] = 0 # pole gdzie przestawiamy wieżę musimy ustawić na True
                         T[k][m] = True
                         if checkT(T): return ((i,j), (k,m))
-                        T[i][j] = True
+                        T[i][j] = True # po sprawdzeniu, odstawiamy wieżę
                         T[k][m] = 0
-    return None
+    return None # jeśli nie zwróciliśmy nic w pętlach to znaczy że żadnej wieży nie da się przestawić tak aby spełniała warunki zadania
 
 def checkT(T): # funkcja sprawdza czy przy obecnym ułożeniu wież, wszystkie pola są szachowane
     n = len(T)
