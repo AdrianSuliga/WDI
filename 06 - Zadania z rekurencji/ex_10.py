@@ -24,8 +24,10 @@ def rewriteArr(T, row, col):
         rowInd += 1
     return SubT
 
-n = int(input())
-T = [[randrange(1,10) for _ in range(n)] for _ in range(n)]
+#n = int(input())
+#T = [[randrange(1,10) for _ in range(n)] for _ in range(n)]
+n = 4
+T =[[4,2,1,1], [1,-1,0,2], [3,0,1,3], [2,2,0,3]]
 print(determinant(T, n))
 for i in range(n):
     print(T[i])
