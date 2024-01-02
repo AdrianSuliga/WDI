@@ -52,7 +52,7 @@ def genList():
     n2 = Node(99, n3)
     n1 = Node(11, n2)
     return n1
-
+"""
 list = genList()
 printList(list)
 
@@ -61,3 +61,4 @@ printList(nList)
 
 mList = removeElement(nList, 11)
 printList(mList)
+"""
