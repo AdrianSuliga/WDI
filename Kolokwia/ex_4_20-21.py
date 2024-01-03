@@ -10,8 +10,7 @@ def divide(N):
         if n == 0 and isPrime(size): return True
         elif n == 0 and not isPrime(size): return False
         for i in range(1, int(log10(n)) + 2):
-            cN = n
-            if isPrime(cN % 10**i) and rec(cN // 10**i, size + 1):
+            if isPrime(n % 10**i) and rec(n // 10**i, size + 1):
                 return True
         return False
     return rec(N, 0)
@@ -26,4 +25,4 @@ def isPrime(n):
         b += 2
     return True
 
-print(divide(2223))
+print(divide(2255))
