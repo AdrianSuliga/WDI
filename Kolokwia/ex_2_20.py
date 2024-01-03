@@ -11,7 +11,7 @@ używanie kolejno dwóch tych samych operacji
 from math import log10
 def transform(X, Y, N): # w zmiennej bannedMove zakładamy, że 0 odpowiada A, 1 - B, 2 - C 
     def rec(X:int, Y:int, N:int, bannedMove:int, moves:int):
-        if moves == N and X == Y:
+        if moves <= N and X == Y:
             return 1
         elif moves == N and X != Y:
             return 0
