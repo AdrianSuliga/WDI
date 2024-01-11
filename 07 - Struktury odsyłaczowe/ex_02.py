@@ -9,9 +9,6 @@ class Node:
         self.next = next
         self.val = val
 
-# ind = 6
-# (1, 7) -> (2, 5) -> (5, 9) -> (9, 2) -> None
-#                      prev     first
 def insertEl(head, value, n):
     if head == None:
         return Node(n, value, None)
