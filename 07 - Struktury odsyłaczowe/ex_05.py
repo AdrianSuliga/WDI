@@ -26,8 +26,27 @@ class Node:
             p = p.next
         print(None)
     def breakAndSort(p):
-        while p is not None:
-            pass
+        L = [None for _ in range(10)] # L[i] posłużymym się do tworzenie nowej listy
+        S = [None for _ in range(10)] # S[i] przechowuje początek każdej z list
+        while p is not None: # przechodzimy po początkowej liście i przepinamy odpowiednie elementy do nowych list
+            for i in range(10):
+                if p.val % 10 == i:
+                    if L[i] == None: # przypadek początkowy, gdy lista nie istnieje jeszcze
+                        L[i] = p
+                        S[i] = L[i]
+                    else:
+                        L[i].next = p
+                        L[i] = L[i].next
+                    break
+            p = p.next
+        for i in range(10): # przepinamy większość ostatnich elementów nowych list do pierwszych elementów
+            if L[i] is not None and i + 1 < 10: # list odpowiadających reszcie o 1 większej, wyjątkiem 
+                L[i].next = S[i + 1] # jest lista odpowiadająca reszcie == 9
+        L[9].next = None # przypadek końcowy, ostatnie element ostatniej listy przepinamy na None
+        for i in range(10):
+            if S[i] is not None:
+                S[i].printList()
+                break
 
 l1 = Node.genList()
 l1.printList()
