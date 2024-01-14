@@ -27,7 +27,7 @@ class Node:
             print(p.val, "-> ", end='')
             p = p.next
         print(None)
-        
+
     def reverseList(p):
         if p == None or p.next == None:
             return p
@@ -83,8 +83,7 @@ class Node:
             p3 = p3.next
         
         return start.reverseList()
-
-                
+        
 l1 = Node.genList1()
 l2 = Node.genList2()
 l1.printList()
