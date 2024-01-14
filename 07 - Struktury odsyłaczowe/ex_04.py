@@ -13,9 +13,6 @@ class Node:
         e1 = Node(3, e2)
         return e1
 
-# None < 3 < 9 < 5 < 19 < 11 e
-#                     q  p   f
-
 def reverseList(p):
     if p == None or p.next == None: return p
     q, f = None, p.next
@@ -26,7 +23,6 @@ def reverseList(p):
         f = f.next
     p.next = q
     return p
-
 
 def printList(p):
     while p is not None:
