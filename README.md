@@ -10,4 +10,4 @@ Auditorium exercises cover topics such as:
 - Recursion,
 - Linked Lists
 
-Exercises' content is available [here]()
+Exercises' content is available [here](https://github.com/AdrianSuliga/WDI/tree/main/00_Content)
