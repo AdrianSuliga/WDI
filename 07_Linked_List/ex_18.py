@@ -67,7 +67,6 @@ class Node:
             return True
         else: return False
 
-
 l = Node.genList()
 l.printList()
 l.removeAllNonUnique().printList()
